@@ -12,7 +12,7 @@ end
 
 def resizeImage(img, x, y)
 	img.gravity=Magick::CenterGravity
-	img.resize!(x, y)
+	img.crop!(Magick::CenterGravity, x, y)
 	img.write(img.filename)
 end
 
